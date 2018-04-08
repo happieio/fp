@@ -1,15 +1,52 @@
 <html>
-<head></head>
+<head>
+    <script src="https://cdn.jsdelivr.net/g/lodash@4(lodash.min.js+lodash.fp.min.js)"></script>
+</head>
 <body>
 <script>
+
+    //programs break down into input, processing, and output
+
+    //input comes in many forms from a user as typed letters or mouse licks
+    //to other programs or functions within a program
+
+    //naming is arguably the hardest aspect of programming. anything that has
+    //meaning to a program will require a name, the names given must lend to
+    //what the variable function is or does to allow other programmers to
+    //meaningfully understand the code
+
+    //variables or better constants
+
+    //a program is broken up into pieces we can reason about called variables
+    // in this FP guide, variable means we can assign anything to a 'variable',
+    //but once that assignment is made it is not a variable in the sense that
+    //we can change it later, so we will use the term constant instead,
+    // which represents the nature of the data better.
+
+    //constants can be data, like a number or a string of letters, or it can be
+    // a function, which performs some operations on other constants
+
+    //constant as data
+    const two = 2;
+    const aSentence = 'the quick brown fox jumped over the lazy dog';
+
+    //constant as a function / processing other constants
+    // this is a function definition, it is a template that can be reused
+    const repeatSentance = (repeat, sentence) => {
+        const numberRangeArray = _.range(0)(repeat);
+        return _.map(() => sentence)(numberRangeArray);
+    };
+
+    //this executes the repeatSentence function and writes out the output to the console
+    console.log(repeatSentance(two, aSentence));
 
     //statements
 
     //this is an assignment statement, all statements end in ;
-    const one = 1;
+
 
     //evaluation expression
-    const result = one === 2;
+    const result = two === 2;
 
     //function expression / function invocation
     console.log('some output');
