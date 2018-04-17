@@ -1,0 +1,13 @@
+- JavaScript
+- TypeScript
+- Bash
+- Git
+- Angular
+- CSS
+ - Box Model
+ - Flex box
+- HTML
+- ionic
+- node
+- npm
+- DOM 
